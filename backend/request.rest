@@ -1,0 +1,98 @@
+// Create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Adhiya B S",
+    "email": "user@gmail.com",
+    "password": "123456",
+    "confirmPassword": "123456",
+    "role": "user"
+}
+
+###
+// Get all user
+GET http://localhost:5000/users
+
+###
+// Get user by id
+GET http://localhost:5000/users/e6a387ac-0411-489f-b7f4-120f4a484ef7
+###
+//Update user
+PATCH http://localhost:5000/users/e6a387ac-0411-489f-b7f4-120f4a484ef7
+Content-Type: application/json
+
+{
+    "name": "Adhiya B S Updated",
+    "email": "user@gmail.com",
+    "password": "123456",
+    "confirmPassword": "123456",
+    "role": "user"
+}
+
+//Delete a User
+###
+DELETE http://localhost:5000/users/e6a387ac-0411-489f-b7f4-120f4a484ef7
+
+
+
+//Login User
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123456"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout
+
+###
+// Get all product
+GET http://localhost:5000/products
+
+###
+// Create product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Product 6",
+    "price": 106
+}
+
+###
+// Get single product - user
+GET http://localhost:5000/products/c3f41edd-4dfb-4a09-9c30-caa498d44268
+
+###
+// Get single product - admin
+GET http://localhost:5000/products/4dde9267-9ab5-467f-b078-e7641a34dac0
+
+###
+// Create product
+PATCH http://localhost:5000/products/4dde9267-9ab5-467f-b078-e7641a34dac0
+Content-Type: application/json
+
+{
+    "name": "Product 4 UPDATED",
+    "price": 103
+}
+
+###
+// Get single product - user
+DELETE http://localhost:5000/products/c3f41edd-4dfb-4a09-9c30-caa498d44268
